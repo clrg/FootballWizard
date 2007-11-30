@@ -7,5 +7,6 @@
 	<buildSpec>
 	</buildSpec>
 	<natures>
+		<nature>org.vexi.vexidev.vexiNature</nature>
 	</natures>
 </projectDescription>

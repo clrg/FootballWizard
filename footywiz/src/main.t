@@ -1,0 +1,3 @@
+<vexi>
+    <footywiz.main />
+</vexi>
