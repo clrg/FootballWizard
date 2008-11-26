@@ -1,0 +1,8 @@
+{
+  "source" : [
+    "F/footywiz/src"
+  ],
+  "projects" : [
+    "P/vexigamelib"
+  ]
+}
