@@ -44,7 +44,7 @@
                 </ui:box>
                 <part image="point_bottomright" />
             </ui:box>
-            <ui:box height="10" />
+            <ui:box height="14" />
         </ui:box>
         <ui:box orient="vertical">
             <ui:box height="34" />
@@ -57,18 +57,21 @@
             <ui:box height="99" align="bottom">
                 <part image="circle_small" align="top" />
             </ui:box>
-            <ui:box height="10" />
+            <ui:box height="14" />
         </ui:box>
         <!-- top goal -->
         <ui:box align="top" layout="layer" shrink="true">
             <part image="goal_upper_net" x="2" y="0" />
-            <part image="goal_upper_frame" x="0" y="0" />
+            <part image="goal_upper_frame" />
             <part image="goal_upper_roof" x="2" y="0" />
         </ui:box>
         <!-- bottom goal -->
         <ui:box align="bottom" layout="layer" shrink="true">
-            <part image="goal_lower_frame" x="0" y="0" />
-            <part image="goal_lower_net" x="2" y="2" />
+            <part align="top" image="goal_lower_frame" />
+            <ui:box orient="vertical" shrink="true">
+                <ui:box height="2" />
+                <part image="goal_lower_net" />
+            </ui:box>
         </ui:box>
         
         thisbox.pitchwidth ++= function(v) {
