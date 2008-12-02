@@ -4,6 +4,7 @@
     <layout:pad fill=":.image.grass" layout="layer" padding="40">
         <ui:box orient="vertical">
             <ui:box height="34" />
+            <!-- top line / corners -->
             <ui:box id="setwidth" vshrink="true">
                 <part image="point_topleft" />
                 <ui:box align="top" height="2">
@@ -12,20 +13,30 @@
                 <part image="point_topright" />
             </ui:box>
             <ui:box>
+                <!-- left line -->
                 <ui:box width="2">
                     <part image="line_paint" vshrink="false" />
                 </ui:box>
-                <ui:box id="setheight" height="2">
-                    <part image="line_paint" hshrink="false" />
+                <ui:box layout="layer" vshrink="true">
+                    <!-- middle line -->
+                    <ui:box>
+		                <ui:box id="setheight" height="2">
+		                    <part image="line_paint" hshrink="false" />
+		                </ui:box>
+		                <part image="point_center" align="center" />
+		                <ui:box height="2">
+		                    <part image="line_paint" hshrink="false" />
+		                </ui:box>
+                    </ui:box>
+                    <!-- center circle -->
+                    <part image="circle_small" align="center" />
                 </ui:box>
-                <part image="point_center" align="center" />
-                <ui:box height="2">
-                    <part image="line_paint" hshrink="false" />
-                </ui:box>
+                <!-- right line -->
                 <ui:box width="2">
                     <part image="line_paint" vshrink="false" />
                 </ui:box>
             </ui:box>
+            <!-- bottom line -->
             <ui:box vshrink="true">
                 <part image="point_bottomleft" />
                 <ui:box align="bottom" height="2">
@@ -37,22 +48,24 @@
         </ui:box>
         <ui:box orient="vertical">
             <ui:box height="34" />
+            <!-- top penalty area -->
             <ui:box height="99" align="top">
                 <part image="circle_small" align="bottom" />
             </ui:box>
             <ui:box />
-            <part image="circle_small" align="center" />
-            <ui:box />
+            <!-- bottom penalty area -->
             <ui:box height="99" align="bottom">
                 <part image="circle_small" align="top" />
             </ui:box>
             <ui:box height="10" />
         </ui:box>
+        <!-- top goal -->
         <ui:box align="top" layout="layer" shrink="true">
             <part image="goal_upper_net" x="2" y="0" />
             <part image="goal_upper_frame" x="0" y="0" />
             <part image="goal_upper_roof" x="2" y="0" />
         </ui:box>
+        <!-- bottom goal -->
         <ui:box align="bottom" layout="layer" shrink="true">
             <part image="goal_lower_frame" x="0" y="0" />
             <part image="goal_lower_net" x="2" y="2" />

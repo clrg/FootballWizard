@@ -4,8 +4,8 @@
     <ui:box framewidth="500" frameheight="400" layout="place" titlebar="Football Wizard">
         <pitch />
         <game id="game" />
-        KeyPressed ++= function(v) { $game.keypress = v; return; }
-        KeyReleased ++= function(v) { $game.keyrelease = v; return; }
+        KeyPressed ++= function(v) { cascade = v; $game.keypress = v; }
+        KeyReleased ++= function(v) { cascade = v; $game.keyrelease = v; }
         vexi.ui.frame = thisbox;
     </ui:box>
 </vexi>
