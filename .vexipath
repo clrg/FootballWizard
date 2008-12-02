@@ -3,6 +3,7 @@
     "F/footywiz/src"
   ],
   "projects" : [
-    "P/vexigamelib"
+    "P/vexigamelib",
+    "P/org.vexi.widgets"
   ]
 }
