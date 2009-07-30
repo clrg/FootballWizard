@@ -1,13 +1,13 @@
 <!-- Copyright 2008 (c) - GNU GPLv3 -->
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz">
-    <ui:box layout="place">
+    <ui:box align="bottomright" layout="place">
         <ball id="ball" />
         <player id="player" />
         <ui:box align="top" shrink="true">
             <label text="Press escape to reset" />
         </ui:box>
-        <label id="fps" align="bottomright" shrink="true" />
+        <label id="fps" shrink="true" />
         
         ////////
         // basic key handling

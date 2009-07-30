@@ -1,11 +1,11 @@
 <!-- Copyright 2008 (c) - GNU GPLv3 -->
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz" xmlns:layout="vexi.layout">
-    <layout:pad fill=":.image.grass" layout="layer" padding="40">
+    <layout:pad align="topleft" fill=":.image.grass" layout="layer" padding="40">
         <ui:box orient="vertical">
             <ui:box height="34" />
             <!-- top line / corners -->
-            <ui:box id="setwidth" vshrink="true">
+            <ui:box id="setwidth" align="topleft" vshrink="true">
                 <part image="point_topleft" />
                 <ui:box align="top" height="2">
                     <part image="line_paint" hshrink="false" />
@@ -23,13 +23,13 @@
 		                <ui:box id="setheight" height="2">
 		                    <part image="line_paint" hshrink="false" />
 		                </ui:box>
-		                <part image="point_center" align="center" />
+		                <part image="point_center" />
 		                <ui:box height="2">
 		                    <part image="line_paint" hshrink="false" />
 		                </ui:box>
                     </ui:box>
                     <!-- center circle -->
-                    <part image="circle_small" align="center" />
+                    <part image="circle_small" />
                 </ui:box>
                 <!-- right line -->
                 <ui:box width="2">
@@ -37,9 +37,9 @@
                 </ui:box>
             </ui:box>
             <!-- bottom line -->
-            <ui:box vshrink="true">
+            <ui:box align="bottom" vshrink="true">
                 <part image="point_bottomleft" />
-                <ui:box align="bottom" height="2">
+                <ui:box height="2">
                     <part image="line_paint" hshrink="false" />
                 </ui:box>
                 <part image="point_bottomright" />
@@ -49,28 +49,32 @@
         <ui:box orient="vertical">
             <ui:box height="34" />
             <!-- top penalty area -->
-            <ui:box height="99" align="top">
-                <part image="circle_small" align="bottom" />
+            <ui:box height="99" align="bottom">
+                <part image="circle_small" />
             </ui:box>
             <ui:box />
             <!-- bottom penalty area -->
-            <ui:box height="99" align="bottom">
-                <part image="circle_small" align="top" />
+            <ui:box height="99" align="top">
+                <part image="circle_small" />
             </ui:box>
             <ui:box height="14" />
         </ui:box>
         <!-- top goal -->
-        <ui:box align="top" layout="layer" shrink="true">
-            <part image="goal_upper_net" x="2" y="0" />
-            <part image="goal_upper_frame" />
-            <part image="goal_upper_roof" x="2" y="0" />
+        <ui:box align="top">
+            <ui:box align="topleft" layout="layer" shrink="true">
+                <part image="goal_upper_net" x="2" y="0" />
+                <part image="goal_upper_frame" />
+                <part image="goal_upper_roof" x="2" y="0" />
+            </ui:box>
         </ui:box>
         <!-- bottom goal -->
-        <ui:box align="bottom" layout="layer" shrink="true">
-            <part align="top" image="goal_lower_frame" />
-            <ui:box orient="vertical" shrink="true">
-                <ui:box height="2" />
-                <part image="goal_lower_net" />
+        <ui:box align="bottom">
+            <ui:box align="top" layout="layer" shrink="true">
+                <part image="goal_lower_frame" />
+                <ui:box orient="vertical" shrink="true">
+                    <ui:box height="2" />
+                    <part image="goal_lower_net" />
+                </ui:box>
             </ui:box>
         </ui:box>
         
