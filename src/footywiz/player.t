@@ -1,10 +1,10 @@
 <!-- Copyright 2008 (c) - GNU GPLv3 -->
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz">
-    <ui:box align="bottomright" layout="layer" width="32" height="34">
-        <ui:box id="shadow" align="bottom" />
-        <ui:box layout="place" width="32" height="32">
-            <ui:box id="img" align="topleft" fill=":.image.player" shrink="true" />
+    <ui:box align="bottom" layout="layer" width="32" height="34">
+        <ui:box id="shadow" />
+        <ui:box align="topleft" layout="place" width="32" height="32">
+            <ui:box id="img" fill=":.image.player" shrink="true" />
         </ui:box>
         
         var direction = 0;

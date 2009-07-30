@@ -1,9 +1,9 @@
 {
   "source" : [
-    "F/footywiz/src"
+    "F/footballwizard/src",
+    "F/footballwizard/src_dev",
+    "LVexi Game Library",
+    "LVexi Platform"
   ],
-  "projects" : [
-    "P/vexigamelib",
-    "P/org.vexi.widgets"
-  ]
+  "projects" : [ ]
 }
