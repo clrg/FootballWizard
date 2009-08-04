@@ -1,4 +1,4 @@
-<!-- Copyright 2008 (c) - GNU GPLv3 -->
+<!-- Copyright 2009 (c) - GNU GPLv3 -->
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz">
     <ui:box align="bottom" layout="layer" width="32" height="34">

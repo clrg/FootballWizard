@@ -1,7 +1,8 @@
-<!-- Copyright 2008 (c) - GNU GPLv3 -->
+<!-- Copyright 2009 (c) - GNU GPLv3 -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="footywiz" xmlns:layout="vexi.layout">
-    <layout:pad align="topleft" fill=":.image.grass" layout="layer" padding="40">
+<vexi xmlns:ui="vexi://ui" xmlns="footywiz.ui"
+    xmlns:layout="vexi.layout" xmlns:img="footywiz.image">
+    <layout:pad align="topleft" fill=":img.grass" layout="layer" padding="30 64 50 64">
         <ui:box orient="vertical">
             <ui:box height="34" />
             <!-- top line / corners -->
@@ -80,12 +81,12 @@
         
         thisbox.pitchwidth ++= function(v) {
             cascade = v;
-            $setwidth = v/2;
+            width = 512 + 128*v;
         }
         
         thisbox.pitchheight ++= function(v) {
             cascade = v;
-            $setheight = v/2;
+            height = 768 + 128*v;
         }
         
     </layout:pad>
