@@ -4,7 +4,7 @@ format from here:
    http://sourceforge.net/projects/vexi
 
 You also need to have the official Java installed, version 1.4 or
-higher.  For more detail go to the Sun Java website:
+higher.  For downloads or details go to the Sun Java website:
 
    http://java.sun.com/
 

@@ -1,11 +1,17 @@
-<!-- Copyright 2008 (c) - GNU GPLv3 -->
+<!-- Copyright 2009 (c) - GNU GPLv3 -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="footywiz">
-    <ui:box framewidth="500" frameheight="400" layout="place" titlebar="Football Wizard">
-        <pitch />
+<vexi xmlns:ui="vexi://ui" xmlns:meta="vexi://meta" xmlns="footywiz"
+    xmlns:vgl="vexi.vegalib" xmlns:pf="vexi.pageflow">
+    <meta:doc>
+        <author>Charles Goodwin</author>
+    </meta:doc>
+    
+    <vgl:surface />
+    <ui:box framewidth="640" frameheight="480" layout="place" shrink="true" titlebar="Football Wizard">
         <game id="game" />
-        KeyPressed ++= function(v) { cascade = v; $game.keypress = v; }
-        KeyReleased ++= function(v) { cascade = v; $game.keyrelease = v; }
+        <menu />
+        
         vexi.ui.frame = thisbox;
+        
     </ui:box>
 </vexi>
