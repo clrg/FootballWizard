@@ -6,9 +6,9 @@
         <actor.ball id="ball" />
         <actor.player id="player" />
         <ui:box align="top" vshrink="true">
-            <ui.label text="Press escape to reset" />
+            <ui.gametext text="Press escape to reset" />
         </ui:box>
-        <ui.label id="fps" shrink="true" />
+        <ui.gametext id="fps" shrink="true" />
         
         ////////
         // basic key handling
