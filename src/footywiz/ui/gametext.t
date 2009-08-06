@@ -1,7 +1,10 @@
 <!-- Copyright 2009 (c) - GNU GPLv3 -->
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz">
-    <ui:box height="16" shrink="true">
+    <ui:box redirect=":$content" height="20" shrink="true">
+        <ui:box width="1" />
+        <ui:box id="content" />
+        <ui:box width="2" />
         
         var txt;
         
@@ -16,6 +19,7 @@
                     c = .ui.gamechar(vexi.box);
                     thisbox[i] = c;
                 }
+                c.display = true;
                 c.textchar = v.charAt(i);
             }
             // hide remaining characters
