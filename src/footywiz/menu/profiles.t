@@ -2,7 +2,7 @@
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz.ui">
     <menu>
-        <menuitem text="Back" />
+        <menuitem id="back" text="Back" />
         
         $back.action ++= function(v) { event = "back"; return; }
         

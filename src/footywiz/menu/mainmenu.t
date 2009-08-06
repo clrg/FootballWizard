@@ -9,10 +9,11 @@
         <menuitem id="options" text="Options" />
         <menuitem id="credits" text="Credits" />
         <menuitem id="quit" text="Quit" />
-        vexi.trace("foo!");
+        
         surface ++= function(v) {
             cascade = v;
             $continue.display = v and v.activegame;
+            if (selected == $continue) selected = $newgame;
         }
         
         $continue.action ++= function(v) { event = "to_game"; return; }

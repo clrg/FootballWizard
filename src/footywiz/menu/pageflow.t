@@ -7,7 +7,7 @@
 
     <pageflow startstate="mainmenu">
         <state name="mainmenu" view=":menu.mainmenu">
-            <transition name="to_continue" next="continue" />
+            <transition name="to_game" next="continue" />
             <transition name="to_newgame" next="newgame" />
             <transition name="to_profiles" next="profiles" />
             <transition name="to_controls" next="controls" />
