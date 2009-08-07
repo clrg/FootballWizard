@@ -7,9 +7,14 @@
     </meta:doc>
     
     <vgl:surface />
-    <ui:box framewidth="640" frameheight="480" layout="place" shrink="true" titlebar="Football Wizard">
+    <ui:box framewidth="640" frameheight="480" frametitle="Football Wizard 0.0dev" layout="place" shrink="true">
         <game id="game" />
-        <menu />
+        <menu id="menu" />
+        
+        KeyPressed ++= function(v) {
+            cascade = v;
+            if (v=="escape") surface.paused = true;
+        }
         
         vexi.ui.frame = thisbox;
         
