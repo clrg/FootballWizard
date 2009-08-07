@@ -11,5 +11,13 @@
         <ui:box height="40" />
         <pf:autorun pageflow=":.menu.pageflow" />
         <ui:box />
+        
+        surface ++= function(v) {
+            cascade = v;
+            if (v) {
+                v.active ++= function(v) { cascade = v; display = !v; }
+            }
+        }
+        
     </ui:box>
 </vexi>

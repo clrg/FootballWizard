@@ -2,9 +2,20 @@
 
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz.ui">
     <menu>
-        <menuitem id="back" text="Back" />
         
-        $back.action ++= function(v) { event = "back"; return; }
+        var gamePaused = function(v) {
+            cascade = v;
+            event = "pause";
+        }
+        
+        surface ++= function(v) {
+            if (surface) surface.paused --= gamePaused;
+            cascade = v;
+            if (v) {
+                v.active = true;
+                v.paused ++= gamePaused;
+            }
+        }
         
     </menu>
 </vexi>

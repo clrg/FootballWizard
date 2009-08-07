@@ -7,7 +7,7 @@
 
     <pageflow startstate="mainmenu">
         <state name="mainmenu" view=":menu.mainmenu">
-            <transition name="to_game" next="continue" />
+            <transition name="to_pause" next="paused" />
             <transition name="to_newgame" next="newgame" />
             <transition name="to_profiles" next="profiles" />
             <transition name="to_controls" next="controls" />
@@ -15,11 +15,17 @@
             <transition name="to_credits" next="credits" />
             <transition name="to_quit" next="quit" />
         </state>
-        <state name="continue" view=":menu.game">
-            <transition name="back" next="mainmenu" />
+        <state name="paused" view=":menu.paused">
+            <transition name="unpause" next="game" />
+            <transition name="menu" next="mainmenu" />
+            <transition name="exit" next="mainmenu" />
+        </state>
+        <state name="game" view=":menu.game">
+            <transition name="pause" next="paused" />
         </state>
         <state name="newgame" view=":menu.newgame">
             <transition name="back" next="mainmenu" />
+            <transition name="start" next="game" />
         </state>
         <state name="profiles" view=":menu.profiles">
             <transition name="back" next="mainmenu" />
