@@ -31,7 +31,7 @@
         
         thisbox.keypress ++= function(v) {
             cascade = v;
-            switch(v) {
+            switch (v) {
             case "escape":
                 reset();
                 break;
