@@ -1,10 +1,10 @@
 <!-- Copyright 2009 (c) - GNU GPLv3 -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="footywiz.ui"
+<vexi xmlns:ui="vexi://ui" xmlns="footywiz.ui" xmlns:goal="footywiz.actor.goal"
     xmlns:layout="vexi.layout" xmlns:img="footywiz.image">
     <layout:pad align="topleft" fill=":img.grass" layout="layer" padding="30 64 50 64">
         <ui:box orient="vertical">
-            <ui:box height="34" />
+            <ui:box height="98" />
             <!-- top line / corners -->
             <ui:box id="setwidth" align="topleft" vshrink="true">
                 <part image="point_topleft" />
@@ -48,7 +48,7 @@
             <ui:box height="14" />
         </ui:box>
         <ui:box orient="vertical">
-            <ui:box height="34" />
+            <ui:box height="98" />
             <!-- top penalty area -->
             <ui:box height="99" align="bottom">
                 <part image="circle_small" />
@@ -62,21 +62,14 @@
         </ui:box>
         <!-- top goal -->
         <ui:box align="top">
-            <ui:box align="topleft" layout="layer" shrink="true">
-                <part image="goal_upper_net" x="2" y="0" />
-                <part image="goal_upper_frame" />
-                <part image="goal_upper_roof" x="2" y="0" />
+            <ui:box orient="vertical" shrink="true">
+                <ui:box height="20" />
+                <goal:upper width="200" height="78" />
             </ui:box>
         </ui:box>
         <!-- bottom goal -->
         <ui:box align="bottom">
-            <ui:box align="top" layout="layer" shrink="true">
-                <part image="goal_lower_frame" />
-                <ui:box orient="vertical" shrink="true">
-                    <ui:box height="2" />
-                    <part image="goal_lower_net" />
-                </ui:box>
-            </ui:box>
+            <goal:lower width="200" height="100" />
         </ui:box>
         
         thisbox.pitchwidth ++= function(v) {
