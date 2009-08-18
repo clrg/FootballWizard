@@ -11,9 +11,18 @@
         <game id="game" />
         <menu id="menu" />
         
-        KeyPressed ++= function(v) {
-            cascade = v;
-            if (v=="escape") surface.paused = true;
+        var s = surface;
+        s.active ++= function(v) { cascade = v; s.paused = !v; }
+        s.paused = true;
+        
+        _KeyPressed ++= function(v) {
+            if (s.paused) {
+                $menu.KeyPressed = v;
+            } else {
+                if (v=="escape") s.paused = true;
+                else $game.KeyPressed = v;
+            }
+            return;
         }
         
         vexi.ui.frame = thisbox;

@@ -1,5 +1,5 @@
-You need a copy of the Vexi core, which can be downloaded in .jar
-format from here:
+You need a copy of the Vexi 3.0 core(.jar), widgets(.vexi), and
+pageflow(.vexi) which can be downloaded has a zip file from here:
 
    http://sourceforge.net/projects/vexi
 
@@ -10,9 +10,15 @@ higher.  For downloads or details go to the Sun Java website:
 
 To run footywiz (aka Football Wizard), from this directory run:
 
-   java -jar <vexi.jar> src
+   java -jar vexi3.jar widgets.vexi pageflow.vexi src
 
 If you experience any problems please go to the Free Gamer forums and
 report them there:
 
    http://forum.freegamedev.net/
+
+All code is licensed under the GPLv3:
+<TODO:link> <TODO:include>
+
+All media is licensed under the CC-BY-SA:
+<TODO:link> <TODO:include> <TODO:version>

@@ -3,12 +3,31 @@
 <vexi xmlns:ui="vexi://ui" xmlns:vgl="vexi.vegalib" xmlns="footywiz">
     <ui:box align="topleft" layout="place">
         <actor.pitch pitchwidth="3" pitchheight="3" />
-        <actor.ball id="ball" />
-        <actor.player id="player" />
-        <ui:box align="top" vshrink="true">
-            <ui.gametext text="Press escape to reset" />
+        <!--actor.ball id="ball" />
+        <actor.player id="player" /-->
+        <ui:box id="overlay" align="top" display="false" vshrink="true">
+            <ui.gametext text="Press escape for menu" />
+            <ui:box />
+            <ui.gametext id="fps" shrink="true" />
         </ui:box>
-        <ui.gametext id="fps" shrink="true" />
+        
+        var scheduler = new vgl.scheduler();
+        
+        scheduler.fps ++= function(v) { cascade = v; $fps.text = v; }
+        
+        thisbox.surface ++= function(v) {
+            cascade = v;
+            if (v) {
+                v.active ++= function(v) {
+                    cascade = v;
+                    $overlay.display = v;
+                    if (v) scheduler.start(true);
+                    else scheduler.pause();
+                }
+            }
+        }
+        
+        /** TODO: delete this old code
         
         ////////
         // basic key handling
@@ -69,7 +88,7 @@
         var oldtime = vexi.date().getTime();
         var newtime;
         var movex = 0; var movey = 0;
-        vexi.thread = function(v) {
+        vexi.thread = function(v) { return;
             while (true) {
                 // terminate the thread if no longer valid
                 if (!visible) break;
@@ -97,6 +116,8 @@
         
         // set starting positions
         reset();
+        
+        */
         
     </ui:box>
 </vexi>
