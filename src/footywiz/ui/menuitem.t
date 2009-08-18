@@ -2,7 +2,6 @@
 
 <vexi xmlns:ui="vexi://ui" xmlns:role="org.vexi.lib.role" xmlns="footywiz">
     <role:clickable />
-    <role:selectable />
     <ui:box height="32" shrink="true">
         <ui:box align="left" width="20">
             <actor.ball id="leftball" display="false" />

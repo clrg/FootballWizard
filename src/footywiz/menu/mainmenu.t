@@ -10,12 +10,6 @@
         <menuitem id="credits" text="Credits" />
         <menuitem id="quit" text="Quit" />
         
-        surface ++= function(v) {
-            cascade = v;
-            $continue.display = v and v.activegame;
-            if (selected == $continue) selected = $newgame;
-        }
-        
         $continue.action ++= function(v) { event = "to_game"; return; }
         $newgame.action ++= function(v) { event = "to_newgame"; return; }
         $profiles.action ++= function(v) { event = "to_profiles"; return; }
@@ -23,6 +17,13 @@
         $options.action ++= function(v) { event = "to_options"; return; }
         $credits.action ++= function(v) { event = "to_credits"; return; }
         $quit.action ++= function(v) { event = "to_quit"; return; }
+        
+        thisbox.event ++= function(v) { cascade = v=="back" ? "to_quit" : v; }
+        
+        thisbox.surface ++= function(v) {
+            cascade = v;
+            $continue.display = v and v.activegame;
+        }
         
     </menu>
 </vexi>
