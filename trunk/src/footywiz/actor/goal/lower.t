@@ -24,5 +24,18 @@
             </ui:box>
         </ui:box>
         <crossbar x="2" />
+        
+        thisbox.depth ++= function(v) {
+            cascade = v;
+        }
+        
+        thisbox.goalwidth ++= function(v) {
+            cascade = v;
+        }
+        
+        thisbox.goalheight ++= function(v) {
+            cascade = v;
+        }
+        
     </ui:box>
 </vexi>

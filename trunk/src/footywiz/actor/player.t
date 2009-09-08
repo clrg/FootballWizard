@@ -1,11 +1,13 @@
 <!-- Copyright 2009 (c) - GNU GPLv3 -->
 
-<vexi xmlns:ui="vexi://ui" xmlns="footywiz">
-    <ui:box align="bottom" layout="layer" width="32" height="34">
-        <ui:box id="shadow" />
-        <ui:box align="topleft" layout="place" width="32" height="32">
-            <ui:box id="img" fill=":.image.player" shrink="true" />
-        </ui:box>
+<vexi xmlns:ui="vexi://ui" xmlns:vgl="vegalib" xmlns="footywiz">
+    <ui:box shrink="true">
+        <vgl:sprite id="player" />
+        
+        if (arguments[0]==null) {
+            throw "must specify player image";
+        }
+        $player.image = arguments[0];
         
         var direction = 0;
         var inmotion = false;

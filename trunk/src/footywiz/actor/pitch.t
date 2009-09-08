@@ -63,13 +63,16 @@
         <!-- top goal -->
         <ui:box align="top">
             <ui:box orient="vertical" shrink="true">
-                <ui:box height="20" />
-                <goal:upper width="200" height="78" />
+                <ui:box height="45" />
+                <goal:upper width="132" height="55" />
             </ui:box>
         </ui:box>
         <!-- bottom goal -->
         <ui:box align="bottom">
-            <goal:lower width="200" height="100" />
+            <ui:box orient="vertical" shrink="true">
+                <goal:lower width="132" height="62" />
+                <ui:box height="38" />
+            </ui:box>
         </ui:box>
         
         thisbox.pitchwidth ++= function(v) {
