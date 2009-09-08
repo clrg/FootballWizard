@@ -3,10 +3,7 @@
 <vexi xmlns:ui="vexi://ui" xmlns="footywiz.actor.goal">
     <ui:box align="topleft" layout="place">
         <ui:box height="7" x="3">
-            <ui:box align="topleft" layout="place">
-                <netting x="-3" width="8" />
-                <netting x="5" />
-            </ui:box>
+            <nettingtop />
             <ui:box width="3" />
         </ui:box>
         <ui:box orient="vertical" x="3">
@@ -26,5 +23,18 @@
             <crossbar />
             <ui:box width="1" />
         </ui:box>
+        
+        thisbox.depth ++= function(v) {
+            cascade = v;
+        }
+        
+        thisbox.goalwidth ++= function(v) {
+            cascade = v;
+        }
+        
+        thisbox.goalheight ++= function(v) {
+            cascade = v;
+        }
+        
     </ui:box>
 </vexi>
