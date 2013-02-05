@@ -1,9 +1,20 @@
-{
-  "source" : [
-    "F/footballwizard/src",
-    "F/footballwizard/src_dev",
-    "LVexi Game Library",
-    "LVexi Platform"
-  ],
-  "projects" : [ ]
-}
+<project-path>
+   <main>
+      <sources>
+         <source-dir path="src"/>
+         <source-dir path="src_dev"/>
+      </sources>
+      <dependencies>
+         <path-entry type="library" name="Vexi Platform"/>
+         <path-entry type="project" name="vegalib"/>
+      </dependencies>
+   </main>
+   <test>
+      <sources/>
+      <dependencies/>
+   </test>
+   <poke>
+      <sources/>
+      <dependencies/>
+   </poke>
+</project-path>
